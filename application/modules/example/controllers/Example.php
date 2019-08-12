@@ -142,4 +142,9 @@ class Example extends CI_Controller {
         $this->set_response($message, 200); // NO_CONTENT (204) being the HTTP response code
     }
 
+    public function get_message_get()
+    {
+        $this->load->model('Example_model');
+        echo $this->Example_model->getMessage();
+    }
 }
